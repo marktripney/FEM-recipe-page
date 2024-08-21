@@ -14,8 +14,8 @@
 
 /***** VARIABLES *****/
 
-/* VARIABLES -> COLOURS */
 :root {
+  /* COLOURS */
   --brown-800: #854632;
   --rose-50: #fff7fb;
   --rose-800: #7a284e;
@@ -24,6 +24,37 @@
   --stone-600: #5f564d;
   --stone-900: #312e2c;
   --white: #fff;
+  /* FONT WEIGHTS */
+  --regular: 400;
+  --semi-bold: 600;
+  --bold: 700;
+}
+
+/***** BASE (RESET) *****/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin-block-end: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+ol,
+ul {
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  padding-left: 25px;
 }
 
 /***** FONT STYLES *****/
@@ -32,7 +63,7 @@ body {
   font-family: 'outfit', sans-serif;
   font-size: 1rem;
   line-height: 150%;
-  font-weight: 400;
+  font-weight: var(--regular);
   color: var(--stone-600);
 }
 
@@ -46,19 +77,21 @@ h3 {
 h1,
 h3 {
   font-family: 'young-serif', serif;
-  font-weight: 400;
+  font-weight: var(--regular);
+  margin-bottom: 1.5rem;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem; /* 36px */
   color: var(--stone-900);
 }
 
 h2 {
   font-family: 'outfit', sans-serif;
-  font-weight: 600;
+  font-weight: var(--semi-bold);
   font-size: 1.25rem;
   color: var(--rose-800);
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -68,7 +101,7 @@ h3 {
 td,
 .bold,
 .instructions-list li::marker {
-  font-weight: 700;
+  font-weight: var(--bold);
 }
 
 h3,
@@ -78,10 +111,14 @@ td,
 }
 
 th {
-  font-weight: 400;
+  font-weight: var(--regular);
 }
 
 /***** SECTIONS *****/
+
+section {
+  margin-bottom: 2rem;
+}
 
 .preparation-time {
   background-color: var(--rose-50);
@@ -92,8 +129,58 @@ th {
   margin-bottom: 0;
 }
 
+.ingredients-list li:last-child {
+  margin-bottom: 2rem;
+}
+
+.instructions,
+.nutrition {
+  padding-top: 2rem;
+  border-top: 1px solid var(--stone-150);
+}
+
+.nutrition-table {
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+td {
+  text-align: start;
+}
+
 /***** IMAGES *****/
 
+img {
+  max-width: 100%;
+}
+
 .hero-image {
-  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+/***** FOOTER *****/
+
+.footer-main {
+  text-align: center;
+  padding-block: 1rem;
+  background-color: var(--rose-50);
+}
+
+.footer-main p {
+  margin: 0;
+}
+
+/***** MEDIA QUERIES *****/
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem; /* 40px */
+  }
+  .hero-image {
+    border-radius: 12px;
+  }
 }
