@@ -1,0 +1,99 @@
+/***** FONT IMPORTS *****/
+
+@font-face {
+  font-family: 'outfit';
+  src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+@font-face {
+  font-family: 'young-serif';
+  src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf')
+    format('truetype');
+}
+
+/***** VARIABLES *****/
+
+/* VARIABLES -> COLOURS */
+:root {
+  --brown-800: #854632;
+  --rose-50: #fff7fb;
+  --rose-800: #7a284e;
+  --stone-100: #f3e5d7;
+  --stone-150: #e3ddd7;
+  --stone-600: #5f564d;
+  --stone-900: #312e2c;
+  --white: #fff;
+}
+
+/***** FONT STYLES *****/
+
+body {
+  font-family: 'outfit', sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  font-weight: 400;
+  color: var(--stone-600);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 100%;
+  margin: 0;
+}
+
+h1,
+h3 {
+  font-family: 'young-serif', serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--stone-900);
+}
+
+h2 {
+  font-family: 'outfit', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--rose-800);
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+td,
+.bold,
+.instructions-list li::marker {
+  font-weight: 700;
+}
+
+h3,
+td,
+.instructions-list li::marker {
+  color: var(--brown-800);
+}
+
+th {
+  font-weight: 400;
+}
+
+/***** SECTIONS *****/
+
+.preparation-time {
+  background-color: var(--rose-50);
+  padding: 1.5rem;
+}
+
+.preparation-list {
+  margin-bottom: 0;
+}
+
+/***** IMAGES *****/
+
+.hero-image {
+  border-radius: 12px;
+}
