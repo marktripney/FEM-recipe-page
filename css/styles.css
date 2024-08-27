@@ -98,7 +98,7 @@ h3 {
 }
 
 h1 {
-  font-size: 2.25rem; /* 36px */
+  font-size: clamp(2.25rem, 2.011rem + 1.018vw, 2.5rem);
   color: var(--stone-900);
 }
 
@@ -214,9 +214,6 @@ img {
 /***** MEDIA QUERIES *****/
 
 @media (min-width: 768px) {
-  h1 {
-    font-size: 2.5rem; /* 40px */
-  }
   .hero-container {
     padding-inline: 2rem;
   }
@@ -225,12 +222,6 @@ img {
     margin: 2.5rem 0 2.5rem;
   }
   .wrapper {
-    max-width: 616px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .wrapper {
-    max-width: 736px;
+    max-width: clamp(38.5rem, 29.929rem + 17.857vw, 46rem);
   }
 }
