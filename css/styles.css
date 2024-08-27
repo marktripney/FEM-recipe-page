@@ -221,7 +221,12 @@ img {
     border-radius: 12px;
     margin: 2.5rem 0 2.5rem;
   }
+  .footer-main {
+    border-radius: 0 0 24px 24px;
+  }
   .wrapper {
     max-width: clamp(38.5rem, 29.929rem + 17.857vw, 46rem);
+    margin-block: 8rem;
+    border-radius: 24px;
   }
 }
