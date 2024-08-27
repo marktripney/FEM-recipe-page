@@ -41,10 +41,22 @@
 
 body {
   margin: 0;
+  background-color: var(--stone-100);
 }
 
-.container {
-  padding-inline: 2rem;
+.wrapper {
+  background-color: var(--white);
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic; /* Show alt text in italic! */
+  background-repeat: no-repeat;
+  background-size: contain;
+  shape-margin: 1rem; /* In case of floats... */
 }
 
 ol,
@@ -55,6 +67,10 @@ ul {
 li {
   margin-bottom: 0.5rem;
   padding-left: 25px;
+}
+
+.container {
+  padding-inline: 2rem;
 }
 
 /***** FONT STYLES *****/
@@ -129,6 +145,11 @@ section {
   margin-bottom: 0;
 }
 
+.ingredients-list,
+.instructions-list {
+  margin-left: 0.25rem;
+}
+
 .ingredients-list li:last-child {
   margin-bottom: 2rem;
 }
@@ -141,15 +162,30 @@ section {
 
 .nutrition-table {
   width: 100%;
+  text-align: left;
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+tr {
+  border-bottom: 1px solid var(--stone-150);
+  line-height: 3rem;
 }
 
 th {
-  text-align: left;
   padding-left: 2rem;
 }
 
 td {
-  text-align: start;
+  padding-right: 2rem;
 }
 
 /***** IMAGES *****/
@@ -168,6 +204,7 @@ img {
   text-align: center;
   padding-block: 1rem;
   background-color: var(--rose-50);
+  margin-top: 3rem;
 }
 
 .footer-main p {
@@ -180,7 +217,20 @@ img {
   h1 {
     font-size: 2.5rem; /* 40px */
   }
+  .hero-container {
+    padding-inline: 2rem;
+  }
   .hero-image {
     border-radius: 12px;
+    margin: 2.5rem 0 2.5rem;
+  }
+  .wrapper {
+    max-width: 616px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    max-width: 736px;
   }
 }
